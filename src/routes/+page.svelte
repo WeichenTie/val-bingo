@@ -11,30 +11,68 @@
 		'Witness teammate miss a full spray',
 		'Steal an ace',
 		'Overtime',
+		'Flawless',
+		'Get flawlessed on',
 		'Top frag',
 		'Bottom frag',
 		'9-3 win',
 		'Another incident...',
 		'Play a game on LOTUS',
-		'Tilted team',
+		'Tilted teammate',
 		'Teammate pushing the wrong site',
 		'Win a game',
 		'Anybody on team rankup',
 		'Anybody on team derank',
 		'Odin kill',
-		'Sherif kill',
+		'Sheriff kill',
+		'Marshal kill',
+		'Operator kill',
+		'Pick up operator from enemy team',
 		'Get killed from a bad call',
 		'Play a controller',
 		'Lose a 3/4/5 vs 1 ',
 		'Teammate dies from ego peaking',
-		'More than 2 teammates buy an Operator',
+		'2 or more teammates buy an Operator',
 		'Win a round due to lineups',
 		'Teammate misses a lineup',
-		'Thrify the enemy',
+		'Thrifty the enemy',
 		'Team ace',
-		'Defuse the bomb while enemies are still alive'
+		'Defuse the bomb while enemies are still alive',
+		'Collateral',
+		'Dies from teammate not clearing site',
+		'Died from someone being a RAT',
+		'Get knifed',
+		'Died due to skin shopping',
+		'Defuse bomb with less than 1 sec remaining',
+		'Get trash talked by the enemy',
+		'Kill teammate with bad call',
+		'Teammate saying "we lost" when still ahead',
+		'Same teammate always last alive (Master Baiter)',
+		'Win by over 5 rounds',
+		'Lose by over 8 rounds',
+		'Get T-bagged by enemy'
+
+		// 'Marcus calls Luka / Tom stupid',
+		// "Tom AFK's a round"
 	];
-	const grid = [
+
+	const tomPredicates = ['Tom meows'];
+
+	const marcusPredicates = [];
+
+	const curtisPredicates = [];
+
+	const swinsonPredicates = ['Swin wants to pipe anything', ''];
+
+	const yangPredicates = [];
+
+	const lukaPredicates = [];
+
+	const calvinPredicates = [];
+
+	const carlosPredicates = [];
+
+	let grid = [
 		[false, false, false, false, false],
 		[false, false, false, false, false],
 		[false, false, false, false, false],
@@ -45,8 +83,6 @@
 	let predicates = genPredicates();
 
 	function genPredicates() {
-		console.log('a');
-
 		allPredicates.sort(() => Math.random() - 0.5);
 		return allPredicates.slice(0, 25);
 	}
@@ -57,6 +93,13 @@
 
 	function onReset() {
 		predicates = genPredicates();
+		grid = [
+			[false, false, false, false, false],
+			[false, false, false, false, false],
+			[false, false, false, false, false],
+			[false, false, false, false, false],
+			[false, false, false, false, false]
+		];
 	}
 </script>
 
